@@ -1,7 +1,7 @@
-## Nexus 5 bootloader unpacker and imgdata tool
+# Nexus 5 bootloader unpacker and imgdata tool
 An unpacker for the bootloader.img file included in Google's factory images plus a tool to unpack, update, create and view the contents of the imgdata.img file contained in bootloader.img files for the Nexus 5 and present on it as partition #17.
 
-# The programs
+## The programs
 bootloader_unpacker: Unpacks the bootloader.img file included in the factory images provided by Google. Outputs them in the working directory.
 Instructions for compilation: gcc bootloader_unpacker.c -o bunp
 Usage: ./bunp <bootloader.img>
@@ -18,7 +18,7 @@ Usage: ./iunp -l <imgdata.img> : list info and contents
               "file1" name should not be longer than 16 chars, excluding extension, and be in current dir
 An example usage would be to remove the unlocked-icon when booting: ./iunp -u imgdata.img unlocked:-:-:0:0
 
-# Included scripts
+## Included scripts
 bootldr.sh: Unpacks the bootloader.img and adds zeroes to the extracted images to have the same size as their corresponding partitions. Output is every processed partition on a newline. This facilitates comparing dumped partitions with those extracted from a bootloader.img file.
 It needs the bootloader_unpacker, so compile bootloader_unpacker: gcc bootloader_unpacker.c -o bunp
 Usage: ./bootldr.sh <bootloader.img>
@@ -30,4 +30,3 @@ Usage: ./writer.sh <config-file> <input imagefile> <forwarding-port> [device-ser
 dumper.sh: Dumps the contents of the flashchip or a partition of an Android device. Only tested on hammerhead (LG Nexus 5 Android 4.4)
 Needed binaries: adb, fastboot, netstat and depending on the dump method also pv, nc and gzip. See config for options.
 Usage: ./dumper.sh <config-file> <output imagefile> <forwarding-port> [device-serial]
-
