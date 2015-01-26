@@ -16,7 +16,6 @@ Usage: ./iunp -l <imgdata.img> : list info and contents
               -c <imgdata.img> <file1.png:X:Y> [...] : creates a new imgdata.img (overwriting any existing!) with contents rest of arguments
               X, Y, W, H are 32bit positive integers and can be given as 0x<HEX> and 0<OCT> as well
               "file1" name should not be longer than 16 chars, excluding extension, and be in current dir
-An example usage would be to remove the unlocked-icon when booting: ./iunp -u imgdata.img unlocked:-:-:0:0
 
 ## Included scripts
 bootldr.sh: Unpacks the bootloader.img and adds zeroes to the extracted images to have the same size as their corresponding partitions. Output is every processed partition on a newline. This facilitates comparing dumped partitions with those extracted from a bootloader.img file.
@@ -30,3 +29,16 @@ Usage: ./writer.sh <config-file> <input imagefile> <forwarding-port> [device-ser
 dumper.sh: Dumps the contents of the flashchip or a partition of an Android device. Only tested on hammerhead (LG Nexus 5 Android 4.4)
 Needed binaries: adb, fastboot, netstat and depending on the dump method also pv, nc and gzip. See config for options.
 Usage: ./dumper.sh <config-file> <output imagefile> <forwarding-port> [device-serial]
+
+
+## Example
+So you unlocked your Nexus 5 and want to get rid of the unlocked symbol when you boot your phone. As the factory image is rather large to download just to disable the symbol, you want to dump the imgdata.img partition first:
+- ./dumper.sh ./etc/hammerhead.conf imgdata.img 5555
+We list the contents of the dumped partition and note the original Width and Height of the unlocked image:
+- ./iunp -l imgdata.img
+Then we disable the unlocked symbol (compile the imgdata_tool first!):
+- ./iunp -u imgdata.img unlocked:-:-:0:0
+We verify that the Width and Height are set to 0 for the unlocked image:
+- ./iunp -l imgdata.img
+And then we write the changes to our phone:
+- ./writer.sh ./etc/hammerhead.conf imgdata.img 5555
