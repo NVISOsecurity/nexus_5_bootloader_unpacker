@@ -4,7 +4,11 @@ An unpacker for the bootloader.img file included in Google's factory images and 
 
 ## The programs
 **bootloader_unpacker**: Unpacks the bootloader.img file included in the factory images provided by Google. Outputs them in the working directory.
-Instructions for compilation: gcc bootloader_unpacker.c -o bunp
+
+Instructions for compilation: 
+```
+gcc bootloader_unpacker.c -o bunp
+```
 
 Usage: 
 ```
