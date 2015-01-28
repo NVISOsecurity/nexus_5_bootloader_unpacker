@@ -21,7 +21,7 @@ Instructions for compilation include two options to compile:
 
 ```
 dynamic: gcc -o iunp imgdata_tool.c -lpng
-static: gcc -o iunp imgdata_tool.c -lpng -lz -static
+static: gcc -o iunp imgdata_tool.c -lpng -lz -lm -static
 ```
 
 Usage:

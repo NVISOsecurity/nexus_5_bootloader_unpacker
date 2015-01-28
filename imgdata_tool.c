@@ -5,7 +5,7 @@
  * Version: 20140801
  * Description: Unpacks/repacks/packs the Android imgdata.img and converts to/from PNG
  * Instructions: Two options to compile: dynamic: gcc -o iunp imgdata_tool.c -lpng
- *                                       static: gcc -o iunp imgdata_tool.c -lpng -lz -static
+ *                                       static: gcc -o iunp imgdata_tool.c -lpng -lz -lm -static
  * Usage: $0 -l <imgdata.img> : list info and contents
  *           -x <imgdata.img> : extract contents in working dir
  *           -u <imgdata.img> <file1:X[:Y[:W[:H]]]> [...] : update "file1" in <imgdata.img> with given coordinates and size, use - to keep existing value
