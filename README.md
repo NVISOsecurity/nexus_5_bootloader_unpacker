@@ -16,7 +16,8 @@ Usage:
 ```
 
 **imgdata_tool**: Tool to work with the Android imgdata.img present in the bootloader.img for the LG Nexus 5 and listed as partition number 17. It can list the contents and stored options, unpack to PNG, change any of the stored options and change any packed image with a given PNG image. Can also create a new imgdata.img or add images to an existing imgdata.img blob.
-Instructions for compilation: two options to compile: 
+
+Instructions for compilation include two options to compile: 
 
 ```
 dynamic: gcc -o iunp imgdata_unpacker.c -lpng
