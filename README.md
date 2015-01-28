@@ -20,8 +20,8 @@ Usage:
 Instructions for compilation include two options to compile: 
 
 ```
-dynamic: gcc -o iunp imgdata_unpacker.c -lpng
-static: gcc -o iunp imgdata_unpacker.c -lpng -lz -static
+dynamic: gcc -o iunp imgdata_tool.c -lpng
+static: gcc -o iunp imgdata_tool.c -lpng -lz -static
 ```
 
 Usage:
