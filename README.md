@@ -31,7 +31,7 @@ Usage:
         -x <imgdata.img> : extract contents in working dir
         -u <imgdata.img> <file1:X[:Y[:W[:H]]]> [...] : update "file1" in <imgdata.img> with given coordinates and size, use - to keep existing value
         -r <imgdata.img> <file1.png>[:X[:Y]] [...] : replace "file1" in <imgdata.img> with given file and optionally new coordinates
-        -c <imgdata.img> <file1.png:X:Y> [...] : creates a new imgdata.img (overwriting any existing!) with contents rest of arguments X, Y, W, H are 32bit positive integers and can be given as 0x<HEX> and 0<OCT> as well. "file1" name should not be longer than 16 chars, excluding extension, and be in current dir.
+        -c <imgdata.img> <file1.png:X:Y> [...] : creates a new imgdata.img (overwriting any existing!) where arguments X, Y, W, H are 32bit positive integers and can be given as 0x<HEX> and 0<OCT> as well. "file1" name should not be longer than 16 chars, excluding extension, and be in current dir.
 ```
 ## Included scripts
 **bootldr.sh**: Unpacks the bootloader.img and adds zeroes to the extracted images to have the same size as their corresponding partitions. Output is every processed partition on a newline. This facilitates comparing dumped partitions with those extracted from a bootloader.img file.
