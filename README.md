@@ -51,6 +51,7 @@ Usage:
 
 **writer.sh**: Writes the contents of an image to the flashchip of an Android device. Only tested on hammerhead (LG Nexus 5 Android 4.4)
 Needed binaries are: adb, fastboot, netstat and depending on the write method also nc and gzip. See config for options.
+
 Usage: 
 ```
 ./writer.sh <config-file> <input imagefile> <forwarding-port> [device-serial]
@@ -58,6 +59,7 @@ Usage:
 
 **dumper.sh**: Dumps the contents of the flashchip or a partition of an Android device. Only tested on hammerhead (LG Nexus 5 Android 4.4)
 Needed binaries: adb, fastboot, netstat and depending on the dump method also pv, nc and gzip. See config for options.
+
 Usage:
 ```
 ./dumper.sh <config-file> <output imagefile> <forwarding-port> [device-serial]
