@@ -11,8 +11,12 @@
 tooldir=$(dirname "$0")
 ### CONFIG BEGIN ###
 # Location of the adb and fastboot binaries, use binname if within $PATH
-adb="$tooldir/aosp/adb"
-fb="$tooldir/aosp/fastboot"
+#adb="$tooldir/aosp/adb"
+#fb="$tooldir/aosp/fastboot"
+
+adb="adb"
+fb="fastboot"
+
 ### CONFIG END ###
 
 # Verify we have working binaries

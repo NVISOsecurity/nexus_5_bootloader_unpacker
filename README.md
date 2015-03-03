@@ -2,6 +2,11 @@
 
 An unpacker for the bootloader.img file included in Google's factory images and a tool to unpack, update, create and view the contents of the imgdata.img file contained in bootloader.img files for the Nexus 5 and present on it as partition #17.
 
+## Configuration
+
+Both adb and fastboot tools should be in your path, as they are used by the dumper.sh and writer.sh scripts.
+They can be downloaded as part of the Android SDK tools: http://developer.android.com/sdk/installing/index.html?pkg=tools
+
 ## The programs
 **bootloader_unpacker**: Unpacks the bootloader.img file included in the factory images provided by Google. Outputs them in the working directory.
 
