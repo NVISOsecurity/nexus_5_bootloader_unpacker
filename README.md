@@ -97,3 +97,7 @@ And then we write the changes to our phone:
 ```
 ./writer.sh ./etc/hammerhead.conf imgdata.img 5555
 ```
+
+## License
+
+This software is released under the GNU GENERAL PUBLIC license (see LICENSE for details).
