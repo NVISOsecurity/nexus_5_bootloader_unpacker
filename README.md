@@ -1,6 +1,6 @@
-# Bootloader unpacker (Nexus 4, 5 and 7) and imgdata tool (Nexus 5)
+# Bootloader unpacker (Nexus 4, 5 and 7) and imgdata tool (Nexus 5) 
 
-An unpacker for the bootloader.img file included in Google's factory images and a tool to unpack, update, create and view the contents of the imgdata.img file contained in bootloader.img files for the Nexus 5 and present on it as partition #17.
+An unpacker for the bootloader.img file included in Google's factory images and a tool to unpack, update, create and view the contents of the imgdata.img file contained in bootloader.img files for the Nexus 5 and present on it as partition #17. The tools can be used with Nexus smartphones only (no tablet support).
 
 ## Configuration
 
